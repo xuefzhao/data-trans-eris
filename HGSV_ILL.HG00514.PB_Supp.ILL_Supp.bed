@@ -1,5 +1,4 @@
 CHR	POS	END	SVTYPE	CALLER	NUM_CALLER	ID	Inheri	PBSupp	Share_Sample	Num_Share_Fam	Num_Share_Samp	caller_cate	GC	PBVali	gene_exon	constrain	trans_exon	SVpipe	GATK
-CHR	POS	END	SVTYPE	CALLER	NUM_CALLER	ID	Inheri	PBSupp	Share_Sample	Num_Share_Fam	Num_Share_Samp	caller_cate	GC	PBVali	gene_exon	constrain	trans_exon	-1	-1
 chr1	767233	788739	DUP	GenomeStrip	1	chr1_767233_788739_DUP	fa_mo_pb	-1	HG00514	1	3	RD_Only	SD	0	gene_exon	gene	0	-1	-1
 chr1	822151	826354	DUP	GenomeStrip	1	chr1_822151_826354_DUP	fa_mo_pb	-1	HG00514	1	3	RD_Only	RMSD	0	gene_exon	gene	0	-1	-1
 chr1	831055	833732	UNK	Delly,GenomeStrip,dCGH,lumpy	4	chr1_831055_833732_UNK	fa_mo_pb	.5-1	HG00514_HG00733_NA19240	3	9	Else	SD	0	gene_exon	gene	0	-1	-1

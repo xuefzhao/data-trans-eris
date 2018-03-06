@@ -1,5 +1,4 @@
 CHR	POS	END	SVTYPE	SVLEN	QC	CALLER	NUM_CALLER	Flag	Inheri	PBSupp	HGSV_ILL	GATK
-CHR	POS	END	SVTYPE	SVLEN	QC	CALLER	NUM_CALLER	label	Inheri	PBSupp	-1	-1
 chr1	934096	934849	DEL	753	PASS	delly,lumpy,manta	3	NONE	fa_mo_pb	.5-1	-1	.5-1
 chr1	948662	948730	DUP	68	PASS	wham	1	NONE	fa_mo_pb	-1	-1	-1
 chr1	1028491	1029081	DEL	590	PASS	delly,lumpy,manta,wham	4	NONE	fa_mo_pb	.5-1	-1	.5-1
