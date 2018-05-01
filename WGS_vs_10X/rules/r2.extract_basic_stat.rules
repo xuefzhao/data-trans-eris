@@ -1,0 +1,51 @@
+"""
+extract_basic_stats
+Xuefang Zhao
+
+extract basic stats from bed
+"""
+
+import os
+
+bed_path = './raw_bed'
+bed_appdix = '.bed'
+
+GMKF_sample=[]
+HGSV_sample=[]
+
+with open(config['GMKF_sample']) as glist:
+    GMKF_sample = [g.strip() for g in glist.readlines()]
+
+with open(config['HGSV_sample']) as glist:
+    HGSV_sample = [g.strip() for g in glist.readlines()]
+
+
+SAMPLES = GMKF_sample + HGSV_sample
+
+
+rule extract_num_SVs:
+        input:
+                path=bed_path,
+        output:
+                touch('stats/Num_SVs.Per_Samp.stat')
+        shell:
+                """
+                Rscript scripts/R1.Extract_Num_SVs_per_samp.R \
+                -p {input.path} \
+                -a .{bed_appdix} \
+                -o {output}
+                """
+
+rule extract_SV_Size:
+        wildcard_constraints:
+                sample='(' + '|'.join(SAMPLES) + ')',
+        output:
+                touch('stats/{sample}.SV_size')
+        shell:
+                """
+                Rscript scripts/R2.bed_to_svsize_dist.R \
+                        -b {bed_path}/{wildcards.sample}.{bed_appdix} \
+                        -o {output}
+                """
+
+

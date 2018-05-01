@@ -1,0 +1,3 @@
+SyntaxError in line 24 of /data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules:
+invalid syntax
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/Snakefile", line 8, in <module>

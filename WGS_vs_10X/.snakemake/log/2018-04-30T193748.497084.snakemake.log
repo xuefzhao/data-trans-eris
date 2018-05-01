@@ -1,0 +1,295 @@
+Building DAG of jobs...
+Relative file path './raw_bed' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	13	bedtools_intersect_10X
+	1	extract_num_SVs
+	13	inheritance_modify_10X
+	1	inheritance_stat_10X
+	29
+
+rule bedtools_intersect_10X:
+    input: raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34314.10X.bed
+    output: raw_bed/inheritance_10X/959.fa_pb.10X.bed, raw_bed/inheritance_10X/959.mo_pb.10X.bed
+    jobid: 105
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=959, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/959.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/959.mo_pb.10X.bed.
+Finished job 105.
+1 of 29 steps (3%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33892.10X.bed
+    output: raw_bed/inheritance_10X/699.fa_pb.10X.bed, raw_bed/inheritance_10X/699.mo_pb.10X.bed
+    jobid: 95
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=699, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/699.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/699.mo_pb.10X.bed.
+Finished job 95.
+2 of 29 steps (7%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/CDH321.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH296.10X.bed
+    output: raw_bed/inheritance_10X/105.fa_pb.10X.bed, raw_bed/inheritance_10X/105.mo_pb.10X.bed
+    jobid: 101
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=105, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/105.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/105.mo_pb.10X.bed.
+Finished job 101.
+3 of 29 steps (10%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34323.10X.bed
+    output: raw_bed/inheritance_10X/969.fa_pb.10X.bed, raw_bed/inheritance_10X/969.mo_pb.10X.bed
+    jobid: 98
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=969, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/969.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/969.mo_pb.10X.bed.
+Finished job 98.
+4 of 29 steps (14%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31661.10X.bed
+    output: raw_bed/inheritance_10X/968.fa_pb.10X.bed, raw_bed/inheritance_10X/968.mo_pb.10X.bed
+    jobid: 103
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=968, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/968.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/968.mo_pb.10X.bed.
+Finished job 103.
+5 of 29 steps (17%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/GMKFC34331.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34329.10X.bed
+    output: raw_bed/inheritance_10X/975.fa_pb.10X.bed, raw_bed/inheritance_10X/975.mo_pb.10X.bed
+    jobid: 106
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=975, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/975.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/975.mo_pb.10X.bed.
+Finished job 106.
+6 of 29 steps (21%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/CDH320.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH318.10X.bed
+    output: raw_bed/inheritance_10X/115.fa_pb.10X.bed, raw_bed/inheritance_10X/115.mo_pb.10X.bed
+    jobid: 97
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=115, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/115.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/115.mo_pb.10X.bed.
+Finished job 97.
+7 of 29 steps (24%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/CDH576.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH577.10X.bed
+    output: raw_bed/inheritance_10X/195.fa_pb.10X.bed, raw_bed/inheritance_10X/195.mo_pb.10X.bed
+    jobid: 104
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=195, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/195.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/195.mo_pb.10X.bed.
+Finished job 104.
+8 of 29 steps (28%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed
+    output: raw_bed/inheritance_10X/78.fa_pb.10X.bed, raw_bed/inheritance_10X/78.mo_pb.10X.bed
+    jobid: 96
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=78, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/78.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/78.mo_pb.10X.bed.
+Finished job 96.
+9 of 29 steps (31%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH05-0015.10X.bed
+    output: raw_bed/inheritance_10X/05-0015.fa_pb.10X.bed, raw_bed/inheritance_10X/05-0015.mo_pb.10X.bed
+    jobid: 94
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=05-0015, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/05-0015.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/05-0015.mo_pb.10X.bed.
+Finished job 94.
+10 of 29 steps (34%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/NA19239.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19240.10X.bed
+    output: raw_bed/inheritance_10X/YRI.fa_pb.10X.bed, raw_bed/inheritance_10X/YRI.mo_pb.10X.bed
+    jobid: 99
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=YRI, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/YRI.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/YRI.mo_pb.10X.bed.
+Finished job 99.
+11 of 29 steps (38%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed
+    output: raw_bed/inheritance_10X/CHS.fa_pb.10X.bed, raw_bed/inheritance_10X/CHS.mo_pb.10X.bed
+    jobid: 102
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=CHS, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/CHS.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/CHS.mo_pb.10X.bed.
+Finished job 102.
+12 of 29 steps (41%) done
+
+rule bedtools_intersect_10X:
+    input: raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed
+    output: raw_bed/inheritance_10X/PUR.fa_pb.10X.bed, raw_bed/inheritance_10X/PUR.mo_pb.10X.bed
+    jobid: 100
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=PUR, bed_appdix=10X.bed
+
+Touching output file raw_bed/inheritance_10X/PUR.fa_pb.10X.bed.
+Touching output file raw_bed/inheritance_10X/PUR.mo_pb.10X.bed.
+Finished job 100.
+13 of 29 steps (45%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34323.10X.bed, raw_bed/inheritance_10X/969.fa_pb.10X.bed, raw_bed/inheritance_10X/969.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/969.pb.RO10.10X.bed, raw_bed/inheritance_10X/969.pb.RO05.10X.bed
+    jobid: 27
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=969, bed_appdix=10X.bed
+
+Finished job 27.
+14 of 29 steps (48%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/GMKFC34331.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34329.10X.bed, raw_bed/inheritance_10X/975.fa_pb.10X.bed, raw_bed/inheritance_10X/975.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/975.pb.RO10.10X.bed, raw_bed/inheritance_10X/975.pb.RO05.10X.bed
+    jobid: 82
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=975, bed_appdix=10X.bed
+
+Finished job 82.
+15 of 29 steps (52%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/CDH320.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH318.10X.bed, raw_bed/inheritance_10X/115.fa_pb.10X.bed, raw_bed/inheritance_10X/115.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/115.pb.RO10.10X.bed, raw_bed/inheritance_10X/115.pb.RO05.10X.bed
+    jobid: 17
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=115, bed_appdix=10X.bed
+
+Finished job 17.
+16 of 29 steps (55%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/CDH321.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH296.10X.bed, raw_bed/inheritance_10X/105.fa_pb.10X.bed, raw_bed/inheritance_10X/105.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/105.pb.RO10.10X.bed, raw_bed/inheritance_10X/105.pb.RO05.10X.bed
+    jobid: 55
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=105, bed_appdix=10X.bed
+
+Finished job 55.
+17 of 29 steps (59%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34314.10X.bed, raw_bed/inheritance_10X/959.fa_pb.10X.bed, raw_bed/inheritance_10X/959.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/959.pb.RO10.10X.bed, raw_bed/inheritance_10X/959.pb.RO05.10X.bed
+    jobid: 81
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=959, bed_appdix=10X.bed
+
+Finished job 81.
+18 of 29 steps (62%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31661.10X.bed, raw_bed/inheritance_10X/968.fa_pb.10X.bed, raw_bed/inheritance_10X/968.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/968.pb.RO10.10X.bed, raw_bed/inheritance_10X/968.pb.RO05.10X.bed
+    jobid: 74
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=968, bed_appdix=10X.bed
+
+Finished job 74.
+19 of 29 steps (66%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/CDH576.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH577.10X.bed, raw_bed/inheritance_10X/195.fa_pb.10X.bed, raw_bed/inheritance_10X/195.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/195.pb.RO10.10X.bed, raw_bed/inheritance_10X/195.pb.RO05.10X.bed
+    jobid: 75
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=195, bed_appdix=10X.bed
+
+Finished job 75.
+20 of 29 steps (69%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33892.10X.bed, raw_bed/inheritance_10X/699.fa_pb.10X.bed, raw_bed/inheritance_10X/699.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/699.pb.RO10.10X.bed, raw_bed/inheritance_10X/699.pb.RO05.10X.bed
+    jobid: 9
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=699, bed_appdix=10X.bed
+
+Finished job 9.
+21 of 29 steps (72%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed, raw_bed/inheritance_10X/78.fa_pb.10X.bed, raw_bed/inheritance_10X/78.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/78.pb.RO10.10X.bed, raw_bed/inheritance_10X/78.pb.RO05.10X.bed
+    jobid: 16
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=78, bed_appdix=10X.bed
+
+Finished job 16.
+22 of 29 steps (76%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH05-0015.10X.bed, raw_bed/inheritance_10X/05-0015.fa_pb.10X.bed, raw_bed/inheritance_10X/05-0015.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/05-0015.pb.RO10.10X.bed, raw_bed/inheritance_10X/05-0015.pb.RO05.10X.bed
+    jobid: 2
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=05-0015, bed_appdix=10X.bed
+
+Finished job 2.
+23 of 29 steps (79%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/NA19239.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19240.10X.bed, raw_bed/inheritance_10X/YRI.fa_pb.10X.bed, raw_bed/inheritance_10X/YRI.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/YRI.pb.RO10.10X.bed, raw_bed/inheritance_10X/YRI.pb.RO05.10X.bed
+    jobid: 38
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=YRI, bed_appdix=10X.bed
+
+Finished job 38.
+24 of 29 steps (83%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed, raw_bed/inheritance_10X/CHS.fa_pb.10X.bed, raw_bed/inheritance_10X/CHS.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/CHS.pb.RO10.10X.bed, raw_bed/inheritance_10X/CHS.pb.RO05.10X.bed
+    jobid: 57
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=CHS, bed_appdix=10X.bed
+
+Finished job 57.
+25 of 29 steps (86%) done
+
+rule inheritance_modify_10X:
+    input: raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed, raw_bed/inheritance_10X/PUR.fa_pb.10X.bed, raw_bed/inheritance_10X/PUR.mo_pb.10X.bed
+    output: raw_bed/inheritance_10X/PUR.pb.RO10.10X.bed, raw_bed/inheritance_10X/PUR.pb.RO05.10X.bed
+    jobid: 52
+    wildcards: bed_path=raw_bed, inheri_filder=inheritance_10X, fam=PUR, bed_appdix=10X.bed
+
+Finished job 52.
+26 of 29 steps (90%) done
+
+rule extract_num_SVs:
+    input: ./raw_bed
+    output: stats/Num_SVs.Per_Samp.stat
+    jobid: 43
+
+Touching output file stats/Num_SVs.Per_Samp.stat.
+Finished job 43.
+27 of 29 steps (93%) done
+
+rule inheritance_stat_10X:
+    output: stats/Inheritance.10X.stat
+    jobid: 3
+
+Finished job 3.
+28 of 29 steps (97%) done
+
+localrule all:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed, raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19239.10X.bed, raw_bed/NA19240.10X.bed, raw_bed/CDH05-0015.10X.bed, raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed, raw_bed/CDH296.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH318.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH320.10X.bed, raw_bed/CDH321.10X.bed, raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH576.10X.bed, raw_bed/CDH577.10X.bed, raw_bed/GMKFC31661.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC33892.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC34314.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34323.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34329.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34331.10X.bed, stats/Num_SVs.Per_Samp.stat, stats/Inheritance.10X.stat, raw_bed/inheritance_10X/CHS.pb.RO10.10X.bed, raw_bed/inheritance_10X/PUR.pb.RO10.10X.bed, raw_bed/inheritance_10X/YRI.pb.RO10.10X.bed, raw_bed/inheritance_10X/78.pb.RO10.10X.bed, raw_bed/inheritance_10X/105.pb.RO10.10X.bed, raw_bed/inheritance_10X/115.pb.RO10.10X.bed, raw_bed/inheritance_10X/195.pb.RO10.10X.bed, raw_bed/inheritance_10X/05-0015.pb.RO10.10X.bed, raw_bed/inheritance_10X/699.pb.RO10.10X.bed, raw_bed/inheritance_10X/959.pb.RO10.10X.bed, raw_bed/inheritance_10X/968.pb.RO10.10X.bed, raw_bed/inheritance_10X/969.pb.RO10.10X.bed, raw_bed/inheritance_10X/975.pb.RO10.10X.bed, stats/CDH05-0015.SV_size, stats/CDH216.SV_size, stats/CDH217.SV_size, stats/CDH218.SV_size, stats/CDH296.SV_size, stats/CDH297.SV_size, stats/CDH318.SV_size, stats/CDH319.SV_size, stats/CDH320.SV_size, stats/CDH321.SV_size, stats/CDH5-15F.SV_size, stats/CDH5-15M.SV_size, stats/CDH549.SV_size, stats/CDH576.SV_size, stats/CDH577.SV_size, stats/GMKFC31661.SV_size, stats/GMKFC31662.SV_size, stats/GMKFC31663.SV_size, stats/GMKFC33892.SV_size, stats/GMKFC33893.SV_size, stats/GMKFC33894.SV_size, stats/GMKFC34314.SV_size, stats/GMKFC34315.SV_size, stats/GMKFC34316.SV_size, stats/GMKFC34323.SV_size, stats/GMKFC34324.SV_size, stats/GMKFC34325.SV_size, stats/GMKFC34329.SV_size, stats/GMKFC34330.SV_size, stats/GMKFC34331.SV_size, stats/HG00512.SV_size, stats/HG00513.SV_size, stats/HG00514.SV_size, stats/HG00731.SV_size, stats/HG00732.SV_size, stats/HG00733.SV_size, stats/NA19238.SV_size, stats/NA19239.SV_size, stats/NA19240.SV_size
+    jobid: 0
+
+Finished job 0.
+29 of 29 steps (100%) done

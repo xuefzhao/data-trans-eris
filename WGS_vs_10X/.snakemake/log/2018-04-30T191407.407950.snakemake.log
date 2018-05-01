@@ -1,0 +1,603 @@
+Building DAG of jobs...
+Relative file path './raw_bed' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	13	bedtools_intersect
+	39	extract_SV_Size
+	13	inheritance_modify
+	66
+
+rule bedtools_intersect:
+    input: raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34314.10X.bed
+    output: raw_bed/959.fa_pb.bed, raw_bed/959.mo_pb.bed
+    jobid: 103
+    wildcards: bed_path=raw_bed, fam=959
+
+Finished job 103.
+1 of 66 steps (2%) done
+
+rule bedtools_intersect:
+    input: raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33892.10X.bed
+    output: raw_bed/699.fa_pb.bed, raw_bed/699.mo_pb.bed
+    jobid: 96
+    wildcards: bed_path=raw_bed, fam=699
+
+Finished job 96.
+2 of 66 steps (3%) done
+
+rule bedtools_intersect:
+    input: raw_bed/CDH321.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH296.10X.bed
+    output: raw_bed/105.fa_pb.bed, raw_bed/105.mo_pb.bed
+    jobid: 105
+    wildcards: bed_path=raw_bed, fam=105
+
+Finished job 105.
+3 of 66 steps (5%) done
+
+rule bedtools_intersect:
+    input: raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34323.10X.bed
+    output: raw_bed/969.fa_pb.bed, raw_bed/969.mo_pb.bed
+    jobid: 100
+    wildcards: bed_path=raw_bed, fam=969
+
+Finished job 100.
+4 of 66 steps (6%) done
+
+rule bedtools_intersect:
+    input: raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31661.10X.bed
+    output: raw_bed/968.fa_pb.bed, raw_bed/968.mo_pb.bed
+    jobid: 98
+    wildcards: bed_path=raw_bed, fam=968
+
+Finished job 98.
+5 of 66 steps (8%) done
+
+rule bedtools_intersect:
+    input: raw_bed/GMKFC34331.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34329.10X.bed
+    output: raw_bed/975.fa_pb.bed, raw_bed/975.mo_pb.bed
+    jobid: 97
+    wildcards: bed_path=raw_bed, fam=975
+
+Finished job 97.
+6 of 66 steps (9%) done
+
+rule bedtools_intersect:
+    input: raw_bed/CDH320.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH318.10X.bed
+    output: raw_bed/115.fa_pb.bed, raw_bed/115.mo_pb.bed
+    jobid: 104
+    wildcards: bed_path=raw_bed, fam=115
+
+Finished job 104.
+7 of 66 steps (11%) done
+
+rule bedtools_intersect:
+    input: raw_bed/CDH576.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH577.10X.bed
+    output: raw_bed/195.fa_pb.bed, raw_bed/195.mo_pb.bed
+    jobid: 94
+    wildcards: bed_path=raw_bed, fam=195
+
+Finished job 94.
+8 of 66 steps (12%) done
+
+rule bedtools_intersect:
+    input: raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed
+    output: raw_bed/78.fa_pb.bed, raw_bed/78.mo_pb.bed
+    jobid: 102
+    wildcards: bed_path=raw_bed, fam=78
+
+Finished job 102.
+9 of 66 steps (14%) done
+
+rule bedtools_intersect:
+    input: raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH05-0015.10X.bed
+    output: raw_bed/05-0015.fa_pb.bed, raw_bed/05-0015.mo_pb.bed
+    jobid: 99
+    wildcards: bed_path=raw_bed, fam=05-0015
+
+Finished job 99.
+10 of 66 steps (15%) done
+
+rule bedtools_intersect:
+    input: raw_bed/NA19239.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19240.10X.bed
+    output: raw_bed/YRI.fa_pb.bed, raw_bed/YRI.mo_pb.bed
+    jobid: 101
+    wildcards: bed_path=raw_bed, fam=YRI
+
+Finished job 101.
+11 of 66 steps (17%) done
+
+rule bedtools_intersect:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed
+    output: raw_bed/CHS.fa_pb.bed, raw_bed/CHS.mo_pb.bed
+    jobid: 93
+    wildcards: bed_path=raw_bed, fam=CHS
+
+Finished job 93.
+12 of 66 steps (18%) done
+
+rule bedtools_intersect:
+    input: raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed
+    output: raw_bed/PUR.fa_pb.bed, raw_bed/PUR.mo_pb.bed
+    jobid: 95
+    wildcards: bed_path=raw_bed, fam=PUR
+
+Finished job 95.
+13 of 66 steps (20%) done
+
+rule inheritance_modify:
+    input: raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34323.10X.bed, raw_bed/969.fa_pb.bed, raw_bed/969.mo_pb.bed
+    output: raw_bed/969.pb.RO10.bed, raw_bed/969.pb.RO05.bed
+    jobid: 25
+    wildcards: bed_path=raw_bed, fam=969
+
+Finished job 25.
+14 of 66 steps (21%) done
+
+rule inheritance_modify:
+    input: raw_bed/GMKFC34331.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34329.10X.bed, raw_bed/975.fa_pb.bed, raw_bed/975.mo_pb.bed
+    output: raw_bed/975.pb.RO10.bed, raw_bed/975.pb.RO05.bed
+    jobid: 16
+    wildcards: bed_path=raw_bed, fam=975
+
+Finished job 16.
+15 of 66 steps (23%) done
+
+rule inheritance_modify:
+    input: raw_bed/CDH320.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH318.10X.bed, raw_bed/115.fa_pb.bed, raw_bed/115.mo_pb.bed
+    output: raw_bed/115.pb.RO10.bed, raw_bed/115.pb.RO05.bed
+    jobid: 61
+    wildcards: bed_path=raw_bed, fam=115
+
+Finished job 61.
+16 of 66 steps (24%) done
+
+rule inheritance_modify:
+    input: raw_bed/CDH321.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH296.10X.bed, raw_bed/105.fa_pb.bed, raw_bed/105.mo_pb.bed
+    output: raw_bed/105.pb.RO10.bed, raw_bed/105.pb.RO05.bed
+    jobid: 74
+    wildcards: bed_path=raw_bed, fam=105
+
+Finished job 74.
+17 of 66 steps (26%) done
+
+rule inheritance_modify:
+    input: raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34314.10X.bed, raw_bed/959.fa_pb.bed, raw_bed/959.mo_pb.bed
+    output: raw_bed/959.pb.RO10.bed, raw_bed/959.pb.RO05.bed
+    jobid: 52
+    wildcards: bed_path=raw_bed, fam=959
+
+Finished job 52.
+18 of 66 steps (27%) done
+
+rule inheritance_modify:
+    input: raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31661.10X.bed, raw_bed/968.fa_pb.bed, raw_bed/968.mo_pb.bed
+    output: raw_bed/968.pb.RO10.bed, raw_bed/968.pb.RO05.bed
+    jobid: 19
+    wildcards: bed_path=raw_bed, fam=968
+
+Finished job 19.
+19 of 66 steps (29%) done
+
+rule inheritance_modify:
+    input: raw_bed/CDH576.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH577.10X.bed, raw_bed/195.fa_pb.bed, raw_bed/195.mo_pb.bed
+    output: raw_bed/195.pb.RO10.bed, raw_bed/195.pb.RO05.bed
+    jobid: 7
+    wildcards: bed_path=raw_bed, fam=195
+
+Finished job 7.
+20 of 66 steps (30%) done
+
+rule inheritance_modify:
+    input: raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33892.10X.bed, raw_bed/699.fa_pb.bed, raw_bed/699.mo_pb.bed
+    output: raw_bed/699.pb.RO10.bed, raw_bed/699.pb.RO05.bed
+    jobid: 11
+    wildcards: bed_path=raw_bed, fam=699
+
+Finished job 11.
+21 of 66 steps (32%) done
+
+rule inheritance_modify:
+    input: raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed, raw_bed/78.fa_pb.bed, raw_bed/78.mo_pb.bed
+    output: raw_bed/78.pb.RO10.bed, raw_bed/78.pb.RO05.bed
+    jobid: 32
+    wildcards: bed_path=raw_bed, fam=78
+
+Finished job 32.
+22 of 66 steps (33%) done
+
+rule inheritance_modify:
+    input: raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH05-0015.10X.bed, raw_bed/05-0015.fa_pb.bed, raw_bed/05-0015.mo_pb.bed
+    output: raw_bed/05-0015.pb.RO10.bed, raw_bed/05-0015.pb.RO05.bed
+    jobid: 22
+    wildcards: bed_path=raw_bed, fam=05-0015
+
+Finished job 22.
+23 of 66 steps (35%) done
+
+rule inheritance_modify:
+    input: raw_bed/NA19239.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19240.10X.bed, raw_bed/YRI.fa_pb.bed, raw_bed/YRI.mo_pb.bed
+    output: raw_bed/YRI.pb.RO10.bed, raw_bed/YRI.pb.RO05.bed
+    jobid: 29
+    wildcards: bed_path=raw_bed, fam=YRI
+
+Finished job 29.
+24 of 66 steps (36%) done
+
+rule inheritance_modify:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed, raw_bed/CHS.fa_pb.bed, raw_bed/CHS.mo_pb.bed
+    output: raw_bed/CHS.pb.RO10.bed, raw_bed/CHS.pb.RO05.bed
+    jobid: 4
+    wildcards: bed_path=raw_bed, fam=CHS
+
+Finished job 4.
+25 of 66 steps (38%) done
+
+rule inheritance_modify:
+    input: raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed, raw_bed/PUR.fa_pb.bed, raw_bed/PUR.mo_pb.bed
+    output: raw_bed/PUR.pb.RO10.bed, raw_bed/PUR.pb.RO05.bed
+    jobid: 10
+    wildcards: bed_path=raw_bed, fam=PUR
+
+Finished job 10.
+26 of 66 steps (39%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34330.SV_size
+    jobid: 46
+    wildcards: sample=GMKFC34330
+
+Touching output file stats/GMKFC34330.SV_size.
+Finished job 46.
+27 of 66 steps (41%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34324.SV_size
+    jobid: 2
+    wildcards: sample=GMKFC34324
+
+Touching output file stats/GMKFC34324.SV_size.
+Finished job 2.
+28 of 66 steps (42%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34329.SV_size
+    jobid: 70
+    wildcards: sample=GMKFC34329
+
+Touching output file stats/GMKFC34329.SV_size.
+Finished job 70.
+29 of 66 steps (44%) done
+
+rule extract_SV_Size:
+    output: stats/HG00731.SV_size
+    jobid: 28
+    wildcards: sample=HG00731
+
+Touching output file stats/HG00731.SV_size.
+Finished job 28.
+30 of 66 steps (45%) done
+
+rule extract_SV_Size:
+    output: stats/CDH320.SV_size
+    jobid: 33
+    wildcards: sample=CDH320
+
+Touching output file stats/CDH320.SV_size.
+Finished job 33.
+31 of 66 steps (47%) done
+
+rule extract_SV_Size:
+    output: stats/CDH576.SV_size
+    jobid: 35
+    wildcards: sample=CDH576
+
+Touching output file stats/CDH576.SV_size.
+Finished job 35.
+32 of 66 steps (48%) done
+
+rule extract_SV_Size:
+    output: stats/NA19239.SV_size
+    jobid: 31
+    wildcards: sample=NA19239
+
+Touching output file stats/NA19239.SV_size.
+Finished job 31.
+33 of 66 steps (50%) done
+
+rule extract_SV_Size:
+    output: stats/CDH218.SV_size
+    jobid: 48
+    wildcards: sample=CDH218
+
+Touching output file stats/CDH218.SV_size.
+Finished job 48.
+34 of 66 steps (52%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34323.SV_size
+    jobid: 9
+    wildcards: sample=GMKFC34323
+
+Touching output file stats/GMKFC34323.SV_size.
+Finished job 9.
+35 of 66 steps (53%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC31662.SV_size
+    jobid: 50
+    wildcards: sample=GMKFC31662
+
+Touching output file stats/GMKFC31662.SV_size.
+Finished job 50.
+36 of 66 steps (55%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34315.SV_size
+    jobid: 57
+    wildcards: sample=GMKFC34315
+
+Touching output file stats/GMKFC34315.SV_size.
+Finished job 57.
+37 of 66 steps (56%) done
+
+rule extract_SV_Size:
+    output: stats/CDH321.SV_size
+    jobid: 14
+    wildcards: sample=CDH321
+
+Touching output file stats/CDH321.SV_size.
+Finished job 14.
+38 of 66 steps (58%) done
+
+rule extract_SV_Size:
+    output: stats/CDH297.SV_size
+    jobid: 58
+    wildcards: sample=CDH297
+
+Touching output file stats/CDH297.SV_size.
+Finished job 58.
+39 of 66 steps (59%) done
+
+rule extract_SV_Size:
+    output: stats/HG00512.SV_size
+    jobid: 13
+    wildcards: sample=HG00512
+
+Touching output file stats/HG00512.SV_size.
+Finished job 13.
+40 of 66 steps (61%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34331.SV_size
+    jobid: 80
+    wildcards: sample=GMKFC34331
+
+Touching output file stats/GMKFC34331.SV_size.
+Finished job 80.
+41 of 66 steps (62%) done
+
+rule extract_SV_Size:
+    output: stats/CDH318.SV_size
+    jobid: 12
+    wildcards: sample=CDH318
+
+Touching output file stats/CDH318.SV_size.
+Finished job 12.
+42 of 66 steps (64%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34314.SV_size
+    jobid: 84
+    wildcards: sample=GMKFC34314
+
+Touching output file stats/GMKFC34314.SV_size.
+Finished job 84.
+43 of 66 steps (65%) done
+
+rule extract_SV_Size:
+    output: stats/CDH549.SV_size
+    jobid: 40
+    wildcards: sample=CDH549
+
+Touching output file stats/CDH549.SV_size.
+Finished job 40.
+44 of 66 steps (67%) done
+
+rule extract_SV_Size:
+    output: stats/CDH296.SV_size
+    jobid: 41
+    wildcards: sample=CDH296
+
+Touching output file stats/CDH296.SV_size.
+Finished job 41.
+45 of 66 steps (68%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC31661.SV_size
+    jobid: 87
+    wildcards: sample=GMKFC31661
+
+Touching output file stats/GMKFC31661.SV_size.
+Finished job 87.
+46 of 66 steps (70%) done
+
+rule extract_SV_Size:
+    output: stats/NA19238.SV_size
+    jobid: 85
+    wildcards: sample=NA19238
+
+Touching output file stats/NA19238.SV_size.
+Finished job 85.
+47 of 66 steps (71%) done
+
+rule extract_SV_Size:
+    output: stats/CDH217.SV_size
+    jobid: 62
+    wildcards: sample=CDH217
+
+Touching output file stats/CDH217.SV_size.
+Finished job 62.
+48 of 66 steps (73%) done
+
+rule extract_SV_Size:
+    output: stats/CDH5-15F.SV_size
+    jobid: 15
+    wildcards: sample=CDH5-15F
+
+Touching output file stats/CDH5-15F.SV_size.
+Finished job 15.
+49 of 66 steps (74%) done
+
+rule extract_SV_Size:
+    output: stats/HG00732.SV_size
+    jobid: 38
+    wildcards: sample=HG00732
+
+Touching output file stats/HG00732.SV_size.
+Finished job 38.
+50 of 66 steps (76%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC33894.SV_size
+    jobid: 18
+    wildcards: sample=GMKFC33894
+
+Touching output file stats/GMKFC33894.SV_size.
+Finished job 18.
+51 of 66 steps (77%) done
+
+rule extract_SV_Size:
+    output: stats/NA19240.SV_size
+    jobid: 59
+    wildcards: sample=NA19240
+
+Touching output file stats/NA19240.SV_size.
+Finished job 59.
+52 of 66 steps (79%) done
+
+rule extract_SV_Size:
+    output: stats/HG00733.SV_size
+    jobid: 81
+    wildcards: sample=HG00733
+
+Touching output file stats/HG00733.SV_size.
+Finished job 81.
+53 of 66 steps (80%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC31663.SV_size
+    jobid: 17
+    wildcards: sample=GMKFC31663
+
+Touching output file stats/GMKFC31663.SV_size.
+Finished job 17.
+54 of 66 steps (82%) done
+
+rule extract_SV_Size:
+    output: stats/CDH5-15M.SV_size
+    jobid: 67
+    wildcards: sample=CDH5-15M
+
+Touching output file stats/CDH5-15M.SV_size.
+Finished job 67.
+55 of 66 steps (83%) done
+
+rule extract_SV_Size:
+    output: stats/CDH216.SV_size
+    jobid: 66
+    wildcards: sample=CDH216
+
+Touching output file stats/CDH216.SV_size.
+Finished job 66.
+56 of 66 steps (85%) done
+
+rule extract_SV_Size:
+    output: stats/HG00514.SV_size
+    jobid: 42
+    wildcards: sample=HG00514
+
+Touching output file stats/HG00514.SV_size.
+Finished job 42.
+57 of 66 steps (86%) done
+
+rule extract_SV_Size:
+    output: stats/CDH05-0015.SV_size
+    jobid: 20
+    wildcards: sample=CDH05-0015
+
+Touching output file stats/CDH05-0015.SV_size.
+Finished job 20.
+58 of 66 steps (88%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC33893.SV_size
+    jobid: 43
+    wildcards: sample=GMKFC33893
+
+Touching output file stats/GMKFC33893.SV_size.
+Finished job 43.
+59 of 66 steps (89%) done
+
+rule extract_SV_Size:
+    output: stats/HG00513.SV_size
+    jobid: 27
+    wildcards: sample=HG00513
+
+Touching output file stats/HG00513.SV_size.
+Finished job 27.
+60 of 66 steps (91%) done
+
+rule extract_SV_Size:
+    output: stats/CDH577.SV_size
+    jobid: 69
+    wildcards: sample=CDH577
+
+Touching output file stats/CDH577.SV_size.
+Finished job 69.
+61 of 66 steps (92%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC33892.SV_size
+    jobid: 45
+    wildcards: sample=GMKFC33892
+
+Touching output file stats/GMKFC33892.SV_size.
+Finished job 45.
+62 of 66 steps (94%) done
+
+rule extract_SV_Size:
+    output: stats/CDH319.SV_size
+    jobid: 23
+    wildcards: sample=CDH319
+
+Touching output file stats/CDH319.SV_size.
+Finished job 23.
+63 of 66 steps (95%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34316.SV_size
+    jobid: 44
+    wildcards: sample=GMKFC34316
+
+Touching output file stats/GMKFC34316.SV_size.
+Finished job 44.
+64 of 66 steps (97%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34325.SV_size
+    jobid: 91
+    wildcards: sample=GMKFC34325
+
+Touching output file stats/GMKFC34325.SV_size.
+Finished job 91.
+65 of 66 steps (98%) done
+
+localrule all:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed, raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19239.10X.bed, raw_bed/NA19240.10X.bed, raw_bed/CDH05-0015.10X.bed, raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed, raw_bed/CDH296.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH318.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH320.10X.bed, raw_bed/CDH321.10X.bed, raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH576.10X.bed, raw_bed/CDH577.10X.bed, raw_bed/GMKFC31661.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC33892.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC34314.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34323.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34329.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34331.10X.bed, stats/Num_SVs.Per_Samp.stat, raw_bed/CHS.pb.RO10.bed, raw_bed/PUR.pb.RO10.bed, raw_bed/YRI.pb.RO10.bed, raw_bed/78.pb.RO10.bed, raw_bed/105.pb.RO10.bed, raw_bed/115.pb.RO10.bed, raw_bed/195.pb.RO10.bed, raw_bed/05-0015.pb.RO10.bed, raw_bed/699.pb.RO10.bed, raw_bed/959.pb.RO10.bed, raw_bed/968.pb.RO10.bed, raw_bed/969.pb.RO10.bed, raw_bed/975.pb.RO10.bed, raw_bed/CHS.pb.RO05.bed, raw_bed/PUR.pb.RO05.bed, raw_bed/YRI.pb.RO05.bed, raw_bed/78.pb.RO05.bed, raw_bed/105.pb.RO05.bed, raw_bed/115.pb.RO05.bed, raw_bed/195.pb.RO05.bed, raw_bed/05-0015.pb.RO05.bed, raw_bed/699.pb.RO05.bed, raw_bed/959.pb.RO05.bed, raw_bed/968.pb.RO05.bed, raw_bed/969.pb.RO05.bed, raw_bed/975.pb.RO05.bed, stats/CDH05-0015.SV_size, stats/CDH216.SV_size, stats/CDH217.SV_size, stats/CDH218.SV_size, stats/CDH296.SV_size, stats/CDH297.SV_size, stats/CDH318.SV_size, stats/CDH319.SV_size, stats/CDH320.SV_size, stats/CDH321.SV_size, stats/CDH5-15F.SV_size, stats/CDH5-15M.SV_size, stats/CDH549.SV_size, stats/CDH576.SV_size, stats/CDH577.SV_size, stats/GMKFC31661.SV_size, stats/GMKFC31662.SV_size, stats/GMKFC31663.SV_size, stats/GMKFC33892.SV_size, stats/GMKFC33893.SV_size, stats/GMKFC33894.SV_size, stats/GMKFC34314.SV_size, stats/GMKFC34315.SV_size, stats/GMKFC34316.SV_size, stats/GMKFC34323.SV_size, stats/GMKFC34324.SV_size, stats/GMKFC34325.SV_size, stats/GMKFC34329.SV_size, stats/GMKFC34330.SV_size, stats/GMKFC34331.SV_size, stats/HG00512.SV_size, stats/HG00513.SV_size, stats/HG00514.SV_size, stats/HG00731.SV_size, stats/HG00732.SV_size, stats/HG00733.SV_size, stats/NA19238.SV_size, stats/NA19239.SV_size, stats/NA19240.SV_size
+    jobid: 0
+
+Finished job 0.
+66 of 66 steps (100%) done

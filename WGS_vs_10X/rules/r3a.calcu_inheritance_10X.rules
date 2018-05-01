@@ -1,0 +1,60 @@
+"""
+extract_basic_stats
+Xuefang Zhao
+
+extract basic stats from bed
+"""
+
+import os
+
+bed_path =  'raw_bed'
+bed_appdix = '10X.bed'
+fam_file=config['families']
+inheri_filder='inheritance_10X'
+
+FAMS=[]
+BAMS={}
+with open(fam_file) as fin:
+        for line in fin:
+                fam,fa,mo,pb=line.strip().split()
+                FAMS.append(fam)
+                BAMS[fam]=['{bed_path}/{id}.10X.bed'.format(bed_path=bed_path, id=id) for id in [fa,mo,pb]]
+
+
+wildcard_constraints:
+        fam = '(' + '|'.join(FAMS) + ')',
+
+rule bedtools_intersect_10X:
+        input:
+                bams=lambda wildcards: BAMS[wildcards.fam]
+        output:
+                fa_pb=touch('{bed_path}/{inheri_filder}/{fam}.fa_pb.10X.bed'),
+                mo_pb=touch('{bed_path}/{inheri_filder}/{fam}.mo_pb.10X.bed')
+        shell:
+                """
+                bedtools intersect -r -f .5 -wo -a {input.bams[2]} -b {input.bams[0]} > {output.fa_pb}
+                bedtools intersect -r -f .5 -wo -a {input.bams[2]} -b {input.bams[1]} > {output.mo_pb}
+                """
+
+rule inheritance_modify_10X:
+        input:
+                bams=lambda wildcards: BAMS[wildcards.fam],
+                fa_pb='{bed_path}/{inheri_filder}/{fam}.fa_pb.10X.bed',
+                mo_pb='{bed_path}/{inheri_filder}/{fam}.mo_pb.10X.bed'
+        output:
+                pb_inheri_RO10= '{bed_path}/{inheri_filder}/{fam}.pb.RO10.10X.bed',
+                pb_inheri_RO05= '{bed_path}/{inheri_filder}/{fam}.pb.RO05.10X.bed'
+        shell:
+                """
+                Rscript scripts/R3.integrate_inheritance.R -f {input.bams[0]} -m {input.bams[1]} -p {input.bams[2]} -o {output.pb_inheri_RO10}
+                Rscript scripts/R3.integrate_inheritance.R -f {input.fa_pb} -m {input.mo_pb} -p {input.bams[2]} -o {output.pb_inheri_RO05}
+                """
+
+rule inheritance_stat_10X:
+        output:
+                'stats/Inheritance.10X.stat'
+        shell:
+                """
+                Rscript scripts/R4.integrate_inheritance_stat.R -p {bed_path}/{inheri_filder} -o {output}
+                """
+

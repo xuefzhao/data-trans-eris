@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Relative file path './raw_bed' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	39	extract_SV_Size
+	1	extract_num_SVs
+	41
+
+rule extract_num_SVs:
+    input: ./raw_bed
+    output: stats/Num_SVs.Per_Samp.stat
+    jobid: 33
+
+Touching output file stats/Num_SVs.Per_Samp.stat.
+Finished job 33.
+1 of 41 steps (2%) done
+
+rule extract_SV_Size:
+    output: stats/GMKFC34323.SV_size
+    jobid: 38
+    wildcards: sample=GMKFC34323
+
+Error in rule extract_SV_Size:
+    jobid: 38
+    output: stats/GMKFC34323.SV_size
+
+RuleException:
+CalledProcessError in line 45 of /data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r2.extract_basic_stat.rules:
+Command ' set -euo pipefail;  
+                Rscript scripts/R2.bed_to_svsize_dist.R                         -b ./raw_bed/GMKFC34323..bed                         -o stats/GMKFC34323.SV_size ' returned non-zero exit status 1.
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r2.extract_basic_stat.rules", line 45, in __rule_extract_SV_Size
+  File "/PHShome/xz974/anaconda3_pysam/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2018-04-30T190340.378098.snakemake.log

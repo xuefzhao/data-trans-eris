@@ -1,0 +1,54 @@
+"""
+GMKF WGS vs 10X
+Xuefang Zhao <XZHAO12@mgh.harvard.edu>
+"""
+
+configfile: 'config.yaml'
+
+include: 'rules/r1.generate_beds.rules'
+include: 'rules/r2.extract_basic_stat.rules'
+include: 'rules/r3a.calcu_inheritance_10X.rules'
+include: 'rules/r3b.calcu_inheritance_ill.rules'
+
+GMKF_sample=[]
+HGSV_sample=[]
+
+with open(config['GMKF_sample']) as glist:
+    GMKF_sample = [g.strip() for g in glist.readlines()]
+
+with open(config['HGSV_sample']) as glist:
+    HGSV_sample = [g.strip() for g in glist.readlines()]
+
+fam_file=config['families']
+
+
+FAMS=[]
+BAMS={}
+with open(fam_file) as fin:
+        for line in fin:
+                fam,fa,mo,pb=line.strip().split()
+                FAMS.append(fam)
+                BAMS[fam]=['{bed_path}/{id}.{bed_appdix}'.format(bed_path=bed_path, id=id, bed_appdix=bed_appdix) for id in [fa,mo,pb]]
+
+wildcard_constraints:
+    gmkf='(' + '|'.join(GMKF_sample) + ')',
+    hgsv='(' + '|'.join(HGSV_sample) + ')',
+    fam = '(' + '|'.join(FAMS) + ')',
+
+GMKF_prefix=config['GMKF_prefix']
+GMKF_appdix=config['GMKF_appdix']
+
+HGSV_prefix=config['HGSV_prefix']
+HGSV_appdix=config['HGSV_appdix']
+
+
+rule all:
+    input:
+        expand('raw_bed/{hgsv}.10X.bed', hgsv=HGSV_sample),
+        expand('raw_bed/{gmkf}.10X.bed', gmkf=GMKF_sample),
+        'stats/Num_SVs.Per_Samp.stat',
+        'stats/Inheritance.ill.stat',
+        'stats/Inheritance.10X.stat',
+        expand('raw_bed/inheritance_10X/{fam}.pb.RO10.10X.bed', fam=FAMS),
+        expand('raw_bed/inheritance_ill/{fam}.pb.RO10.ill.bed', fam=FAMS),
+        expand('stats/{sample}.SV_size', sample = GMKF_sample+HGSV_sample)

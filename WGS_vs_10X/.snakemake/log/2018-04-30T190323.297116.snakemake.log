@@ -1,0 +1,4 @@
+FileNotFoundError in line 4 of /data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules:
+[Errno 2] No such file or directory: '../ref/GMKF_sample.list'
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/Snakefile", line 8, in <module>
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules", line 4, in <module>

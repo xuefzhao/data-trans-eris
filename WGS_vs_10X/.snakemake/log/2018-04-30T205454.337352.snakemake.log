@@ -1,0 +1,23 @@
+Building DAG of jobs...
+Relative file path './raw_bed' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	inheritance_stat_ill
+	2
+
+rule inheritance_stat_ill:
+    output: stats/Inheritance.ill.stat
+    jobid: 63
+
+Finished job 63.
+1 of 2 steps (50%) done
+
+localrule all:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed, raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19239.10X.bed, raw_bed/NA19240.10X.bed, raw_bed/CDH05-0015.10X.bed, raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed, raw_bed/CDH296.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH318.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH320.10X.bed, raw_bed/CDH321.10X.bed, raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH576.10X.bed, raw_bed/CDH577.10X.bed, raw_bed/GMKFC31661.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC33892.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC34314.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34323.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34329.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34331.10X.bed, stats/Num_SVs.Per_Samp.stat, stats/Inheritance.ill.stat, stats/Inheritance.10X.stat, raw_bed/inheritance_10X/CHS.pb.RO10.10X.bed, raw_bed/inheritance_10X/PUR.pb.RO10.10X.bed, raw_bed/inheritance_10X/YRI.pb.RO10.10X.bed, raw_bed/inheritance_10X/78.pb.RO10.10X.bed, raw_bed/inheritance_10X/115.pb.RO10.10X.bed, raw_bed/inheritance_10X/195.pb.RO10.10X.bed, raw_bed/inheritance_10X/05-0015.pb.RO10.10X.bed, raw_bed/inheritance_10X/699.pb.RO10.10X.bed, raw_bed/inheritance_10X/968.pb.RO10.10X.bed, raw_bed/inheritance_10X/969.pb.RO10.10X.bed, raw_bed/inheritance_10X/975.pb.RO10.10X.bed, raw_bed/inheritance_ill/CHS.pb.RO10.ill.bed, raw_bed/inheritance_ill/PUR.pb.RO10.ill.bed, raw_bed/inheritance_ill/YRI.pb.RO10.ill.bed, raw_bed/inheritance_ill/78.pb.RO10.ill.bed, raw_bed/inheritance_ill/115.pb.RO10.ill.bed, raw_bed/inheritance_ill/195.pb.RO10.ill.bed, raw_bed/inheritance_ill/05-0015.pb.RO10.ill.bed, raw_bed/inheritance_ill/699.pb.RO10.ill.bed, raw_bed/inheritance_ill/968.pb.RO10.ill.bed, raw_bed/inheritance_ill/969.pb.RO10.ill.bed, raw_bed/inheritance_ill/975.pb.RO10.ill.bed, stats/CDH05-0015.SV_size, stats/CDH216.SV_size, stats/CDH217.SV_size, stats/CDH218.SV_size, stats/CDH296.SV_size, stats/CDH297.SV_size, stats/CDH318.SV_size, stats/CDH319.SV_size, stats/CDH320.SV_size, stats/CDH321.SV_size, stats/CDH5-15F.SV_size, stats/CDH5-15M.SV_size, stats/CDH549.SV_size, stats/CDH576.SV_size, stats/CDH577.SV_size, stats/GMKFC31661.SV_size, stats/GMKFC31662.SV_size, stats/GMKFC31663.SV_size, stats/GMKFC33892.SV_size, stats/GMKFC33893.SV_size, stats/GMKFC33894.SV_size, stats/GMKFC34314.SV_size, stats/GMKFC34315.SV_size, stats/GMKFC34316.SV_size, stats/GMKFC34323.SV_size, stats/GMKFC34324.SV_size, stats/GMKFC34325.SV_size, stats/GMKFC34329.SV_size, stats/GMKFC34330.SV_size, stats/GMKFC34331.SV_size, stats/HG00512.SV_size, stats/HG00513.SV_size, stats/HG00514.SV_size, stats/HG00731.SV_size, stats/HG00732.SV_size, stats/HG00733.SV_size, stats/NA19238.SV_size, stats/NA19239.SV_size, stats/NA19240.SV_size
+    jobid: 0
+
+Finished job 0.
+2 of 2 steps (100%) done

@@ -1,0 +1,43 @@
+GMKF_sample=[]
+HGSV_sample=[]
+
+with open(config['GMKF_sample']) as glist:
+    GMKF_sample = [g.strip() for g in glist.readlines()]
+
+with open(config['HGSV_sample']) as glist:
+    HGSV_sample = [g.strip() for g in glist.readlines()]
+
+wildcard_constraints:
+    gmkf='(' + '|'.join(GMKF_sample) + ')',
+    hgsv='(' + '|'.join(HGSV_sample) + ')'
+
+
+GMKF_prefix=config['GMKF_prefix']
+GMKF_appdix=config['GMKF_appdix']
+
+HGSV_prefix=config['HGSV_prefix']
+HGSV_appdix=config['HGSV_appdix']
+
+rule HGSV_bed_write:
+  params:
+    '{hgsv}'
+  output:
+    touch('raw_bed/{hgsv}.10X.bed')
+  shell:
+    """
+     grep PASS {HGSV_prefix}{params}{HGSV_appdix}| awk '{{if ($3-$2>49) print}}' | cut -f1-4,6 | sort -k1,1 -k2,2n  > {output}
+    """
+
+
+rule GMKF_bed_write:
+  params:
+    '{gmkf}'
+  output:
+    touch('raw_bed/{gmkf}.10X.bed')
+  shell:
+    """
+    grep PASS {GMKF_prefix}{params}{GMKF_appdix} | awk '{{if ($3-$2>49) print}}' | cut -f1-4,6 | sort -k1,1 -k2,2n  > {output}
+
+    """
+
+

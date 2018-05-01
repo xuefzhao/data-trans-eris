@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in line 34 of /data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules:
+Wildcards in input files cannot be determined from output files:
+'GMKF_prefix'

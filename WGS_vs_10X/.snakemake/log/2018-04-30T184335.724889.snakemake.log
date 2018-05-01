@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	30	GMKF_bed_write
+	9	HGSV_bed_write
+	1	all
+	40
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34324.10X.bed
+    jobid: 20
+    wildcards: gmkf=GMKFC34324
+
+Error in rule GMKF_bed_write:
+    jobid: 20
+    output: raw_bed/GMKFC34324.10X.bed
+
+RuleException:
+NameError in line 38 of /data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules:
+The name "'GMKF_prefix'" is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules", line 38, in __rule_GMKF_bed_write
+  File "/PHShome/xz974/anaconda3_pysam/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2018-04-30T184335.724889.snakemake.log

@@ -1,0 +1,10 @@
+GMKF_sample: ref/GMKF_sample.list
+HGSV_sample: ref/HGSV_sample.list
+
+GMKF_prefix: ../LongRanger/all_SVs/LongRanger_
+GMKF_appdix: .all_SVs.bed
+
+HGSV_prefix: ../HGSV_10x/vcf_files/all_SVs/
+HGSV_appdix:  .all_SVs.bed
+
+families: ref/family.list 

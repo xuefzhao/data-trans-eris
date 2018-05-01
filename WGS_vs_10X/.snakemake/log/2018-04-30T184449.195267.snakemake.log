@@ -1,0 +1,367 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	30	GMKF_bed_write
+	9	HGSV_bed_write
+	1	all
+	40
+
+rule HGSV_bed_write:
+    output: raw_bed/NA19240.10X.bed
+    jobid: 32
+    wildcards: hgsv=NA19240
+
+Touching output file raw_bed/NA19240.10X.bed.
+Finished job 32.
+1 of 40 steps (2%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC33893.10X.bed
+    jobid: 13
+    wildcards: gmkf=GMKFC33893
+
+Touching output file raw_bed/GMKFC33893.10X.bed.
+Finished job 13.
+2 of 40 steps (5%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH321.10X.bed
+    jobid: 12
+    wildcards: gmkf=CDH321
+
+Touching output file raw_bed/CDH321.10X.bed.
+Finished job 12.
+3 of 40 steps (8%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/HG00731.10X.bed
+    jobid: 34
+    wildcards: hgsv=HG00731
+
+Touching output file raw_bed/HG00731.10X.bed.
+Finished job 34.
+4 of 40 steps (10%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34325.10X.bed
+    jobid: 15
+    wildcards: gmkf=GMKFC34325
+
+Touching output file raw_bed/GMKFC34325.10X.bed.
+Finished job 15.
+5 of 40 steps (12%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH5-15M.10X.bed
+    jobid: 16
+    wildcards: gmkf=CDH5-15M
+
+Touching output file raw_bed/CDH5-15M.10X.bed.
+Finished job 16.
+6 of 40 steps (15%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH296.10X.bed
+    jobid: 18
+    wildcards: gmkf=CDH296
+
+Touching output file raw_bed/CDH296.10X.bed.
+Finished job 18.
+7 of 40 steps (18%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH319.10X.bed
+    jobid: 17
+    wildcards: gmkf=CDH319
+
+Touching output file raw_bed/CDH319.10X.bed.
+Finished job 17.
+8 of 40 steps (20%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC31663.10X.bed
+    jobid: 19
+    wildcards: gmkf=GMKFC31663
+
+Touching output file raw_bed/GMKFC31663.10X.bed.
+Finished job 19.
+9 of 40 steps (22%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH05-0015.10X.bed
+    jobid: 21
+    wildcards: gmkf=CDH05-0015
+
+Touching output file raw_bed/CDH05-0015.10X.bed.
+Finished job 21.
+10 of 40 steps (25%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH297.10X.bed
+    jobid: 20
+    wildcards: gmkf=CDH297
+
+Touching output file raw_bed/CDH297.10X.bed.
+Finished job 20.
+11 of 40 steps (28%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC31661.10X.bed
+    jobid: 22
+    wildcards: gmkf=GMKFC31661
+
+Touching output file raw_bed/GMKFC31661.10X.bed.
+Finished job 22.
+12 of 40 steps (30%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/HG00732.10X.bed
+    jobid: 38
+    wildcards: hgsv=HG00732
+
+Touching output file raw_bed/HG00732.10X.bed.
+Finished job 38.
+13 of 40 steps (32%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH320.10X.bed
+    jobid: 3
+    wildcards: gmkf=CDH320
+
+Touching output file raw_bed/CDH320.10X.bed.
+Finished job 3.
+14 of 40 steps (35%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC33892.10X.bed
+    jobid: 4
+    wildcards: gmkf=GMKFC33892
+
+Touching output file raw_bed/GMKFC33892.10X.bed.
+Finished job 4.
+15 of 40 steps (38%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34315.10X.bed
+    jobid: 5
+    wildcards: gmkf=GMKFC34315
+
+Touching output file raw_bed/GMKFC34315.10X.bed.
+Finished job 5.
+16 of 40 steps (40%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH549.10X.bed
+    jobid: 6
+    wildcards: gmkf=CDH549
+
+Touching output file raw_bed/CDH549.10X.bed.
+Finished job 6.
+17 of 40 steps (42%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH218.10X.bed
+    jobid: 8
+    wildcards: gmkf=CDH218
+
+Touching output file raw_bed/CDH218.10X.bed.
+Finished job 8.
+18 of 40 steps (45%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/HG00733.10X.bed
+    jobid: 28
+    wildcards: hgsv=HG00733
+
+Touching output file raw_bed/HG00733.10X.bed.
+Finished job 28.
+19 of 40 steps (48%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34314.10X.bed
+    jobid: 11
+    wildcards: gmkf=GMKFC34314
+
+Touching output file raw_bed/GMKFC34314.10X.bed.
+Finished job 11.
+20 of 40 steps (50%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34316.10X.bed
+    jobid: 10
+    wildcards: gmkf=GMKFC34316
+
+Touching output file raw_bed/GMKFC34316.10X.bed.
+Finished job 10.
+21 of 40 steps (52%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH576.10X.bed
+    jobid: 9
+    wildcards: gmkf=CDH576
+
+Touching output file raw_bed/CDH576.10X.bed.
+Finished job 9.
+22 of 40 steps (55%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH318.10X.bed
+    jobid: 31
+    wildcards: gmkf=CDH318
+
+Touching output file raw_bed/CDH318.10X.bed.
+Finished job 31.
+23 of 40 steps (57%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH5-15F.10X.bed
+    jobid: 35
+    wildcards: gmkf=CDH5-15F
+
+Touching output file raw_bed/CDH5-15F.10X.bed.
+Finished job 35.
+24 of 40 steps (60%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH216.10X.bed
+    jobid: 33
+    wildcards: gmkf=CDH216
+
+Touching output file raw_bed/CDH216.10X.bed.
+Finished job 33.
+25 of 40 steps (62%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/HG00514.10X.bed
+    jobid: 14
+    wildcards: hgsv=HG00514
+
+Touching output file raw_bed/HG00514.10X.bed.
+Finished job 14.
+26 of 40 steps (65%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH217.10X.bed
+    jobid: 36
+    wildcards: gmkf=CDH217
+
+Touching output file raw_bed/CDH217.10X.bed.
+Finished job 36.
+27 of 40 steps (68%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC31662.10X.bed
+    jobid: 37
+    wildcards: gmkf=GMKFC31662
+
+Touching output file raw_bed/GMKFC31662.10X.bed.
+Finished job 37.
+28 of 40 steps (70%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34329.10X.bed
+    jobid: 39
+    wildcards: gmkf=GMKFC34329
+
+Touching output file raw_bed/GMKFC34329.10X.bed.
+Finished job 39.
+29 of 40 steps (72%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/NA19238.10X.bed
+    jobid: 23
+    wildcards: hgsv=NA19238
+
+Touching output file raw_bed/NA19238.10X.bed.
+Finished job 23.
+30 of 40 steps (75%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/HG00513.10X.bed
+    jobid: 2
+    wildcards: hgsv=HG00513
+
+Touching output file raw_bed/HG00513.10X.bed.
+Finished job 2.
+31 of 40 steps (78%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/CDH577.10X.bed
+    jobid: 24
+    wildcards: gmkf=CDH577
+
+Touching output file raw_bed/CDH577.10X.bed.
+Finished job 24.
+32 of 40 steps (80%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/HG00512.10X.bed
+    jobid: 1
+    wildcards: hgsv=HG00512
+
+Touching output file raw_bed/HG00512.10X.bed.
+Finished job 1.
+33 of 40 steps (82%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC33894.10X.bed
+    jobid: 25
+    wildcards: gmkf=GMKFC33894
+
+Touching output file raw_bed/GMKFC33894.10X.bed.
+Finished job 25.
+34 of 40 steps (85%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34331.10X.bed
+    jobid: 26
+    wildcards: gmkf=GMKFC34331
+
+Touching output file raw_bed/GMKFC34331.10X.bed.
+Finished job 26.
+35 of 40 steps (88%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34330.10X.bed
+    jobid: 27
+    wildcards: gmkf=GMKFC34330
+
+Touching output file raw_bed/GMKFC34330.10X.bed.
+Finished job 27.
+36 of 40 steps (90%) done
+
+rule HGSV_bed_write:
+    output: raw_bed/NA19239.10X.bed
+    jobid: 7
+    wildcards: hgsv=NA19239
+
+Touching output file raw_bed/NA19239.10X.bed.
+Finished job 7.
+37 of 40 steps (92%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34323.10X.bed
+    jobid: 30
+    wildcards: gmkf=GMKFC34323
+
+Touching output file raw_bed/GMKFC34323.10X.bed.
+Finished job 30.
+38 of 40 steps (95%) done
+
+rule GMKF_bed_write:
+    output: raw_bed/GMKFC34324.10X.bed
+    jobid: 29
+    wildcards: gmkf=GMKFC34324
+
+Touching output file raw_bed/GMKFC34324.10X.bed.
+Finished job 29.
+39 of 40 steps (98%) done
+
+localrule all:
+    input: raw_bed/HG00512.10X.bed, raw_bed/HG00513.10X.bed, raw_bed/HG00514.10X.bed, raw_bed/HG00731.10X.bed, raw_bed/HG00732.10X.bed, raw_bed/HG00733.10X.bed, raw_bed/NA19238.10X.bed, raw_bed/NA19239.10X.bed, raw_bed/NA19240.10X.bed, raw_bed/CDH05-0015.10X.bed, raw_bed/CDH216.10X.bed, raw_bed/CDH217.10X.bed, raw_bed/CDH218.10X.bed, raw_bed/CDH296.10X.bed, raw_bed/CDH297.10X.bed, raw_bed/CDH318.10X.bed, raw_bed/CDH319.10X.bed, raw_bed/CDH320.10X.bed, raw_bed/CDH321.10X.bed, raw_bed/CDH5-15F.10X.bed, raw_bed/CDH5-15M.10X.bed, raw_bed/CDH549.10X.bed, raw_bed/CDH576.10X.bed, raw_bed/CDH577.10X.bed, raw_bed/GMKFC31661.10X.bed, raw_bed/GMKFC31662.10X.bed, raw_bed/GMKFC31663.10X.bed, raw_bed/GMKFC33892.10X.bed, raw_bed/GMKFC33893.10X.bed, raw_bed/GMKFC33894.10X.bed, raw_bed/GMKFC34314.10X.bed, raw_bed/GMKFC34315.10X.bed, raw_bed/GMKFC34316.10X.bed, raw_bed/GMKFC34323.10X.bed, raw_bed/GMKFC34324.10X.bed, raw_bed/GMKFC34325.10X.bed, raw_bed/GMKFC34329.10X.bed, raw_bed/GMKFC34330.10X.bed, raw_bed/GMKFC34331.10X.bed
+    jobid: 0
+
+Finished job 0.
+40 of 40 steps (100%) done

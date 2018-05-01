@@ -1,0 +1,4 @@
+CreateRuleException in line 69 of /data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r3.calcu_inheritancee.rules:
+The name bedtools_intersect is already used by another rule
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/Snakefile", line 10, in <module>
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r3.calcu_inheritancee.rules", line 69, in <module>

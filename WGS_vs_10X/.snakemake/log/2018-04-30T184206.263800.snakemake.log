@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	30	GMKF_bed_write
+	9	HGSV_bed_write
+	1	all
+	40
+
+rule HGSV_bed_write:
+    output: raw_bed/HG00512.10X.bed
+    jobid: 12
+    wildcards: hgsv=HG00512
+
+Error in rule HGSV_bed_write:
+    jobid: 12
+    output: raw_bed/HG00512.10X.bed
+
+RuleException:
+NameError in line 27 of /data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules:
+The name "'HGSV_prefix'" is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
+  File "/data/talkowski/xuefang/data/GMKF-10X/WGS_vs_10X/rules/r1.generate_beds.rules", line 27, in __rule_HGSV_bed_write
+  File "/PHShome/xz974/anaconda3_pysam/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+Will exit after finishing currently running jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2018-04-30T184206.263800.snakemake.log

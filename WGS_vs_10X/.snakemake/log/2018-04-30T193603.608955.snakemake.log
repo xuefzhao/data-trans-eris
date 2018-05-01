@@ -1,0 +1,7 @@
+Building DAG of jobs...
+Relative file path './raw_bed' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+AmbiguousRuleException:
+Rules bedtools_intersect_10X and bedtools_intersect_ill are ambiguous for the file raw_bed/inheritance_ill/115.fa_pb.ill.bed.
+Expected input files:
+	bedtools_intersect_10X: raw_bed/CDH320.ill.bed raw_bed/CDH319.ill.bed raw_bed/CDH318.ill.bed
+	bedtools_intersect_ill: raw_bed/CDH320.ill.bed raw_bed/CDH319.ill.bed raw_bed/CDH318.ill.bed
